@@ -1,0 +1,559 @@
+Discovered irqs for enp4s0f1: 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135
+Assign irq 107 core_id 0
+Assign irq 108 core_id 0
+Assign irq 109 core_id 0
+Assign irq 110 core_id 0
+Assign irq 111 core_id 0
+Assign irq 112 core_id 0
+Assign irq 113 core_id 0
+Assign irq 114 core_id 0
+Assign irq 115 core_id 0
+Assign irq 116 core_id 0
+Assign irq 117 core_id 0
+Assign irq 118 core_id 0
+Assign irq 119 core_id 0
+Assign irq 120 core_id 0
+Assign irq 121 core_id 0
+Assign irq 122 core_id 0
+Assign irq 123 core_id 0
+Assign irq 124 core_id 0
+Assign irq 125 core_id 0
+Assign irq 126 core_id 0
+Assign irq 127 core_id 0
+Assign irq 128 core_id 0
+Assign irq 129 core_id 0
+Assign irq 130 core_id 0
+Assign irq 131 core_id 0
+Assign irq 132 core_id 0
+Assign irq 133 core_id 0
+Assign irq 134 core_id 0
+Assign irq 135 core_id 0
+
+done.
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+268435456
+268435456
+268435456
+268435456
+268435456
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+Cannot get device feature names: No such device
+Cannot get device feature names: No such device
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47384
+[  4] local 10.1.4.100 port 47384 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.0 GBytes  7.91 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.4 GBytes  7.97 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47392
+[  4] local 10.1.4.100 port 47392 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.0 GBytes  7.90 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.3 GBytes  7.96 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47400
+[  4] local 10.1.4.100 port 47400 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.1 GBytes  7.92 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.4 GBytes  7.98 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47408
+[  4] local 10.1.4.100 port 47408 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.0 GBytes  7.90 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.3 GBytes  7.95 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47416
+[  4] local 10.1.4.100 port 47416 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  47.2 GBytes  8.11 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  47.6 GBytes  8.17 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47424
+[  4] local 10.1.4.100 port 47424 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  33.1 GBytes  5.69 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  33.3 GBytes  5.73 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47432
+[  4] local 10.1.4.100 port 47432 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  45.9 GBytes  7.89 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.3 GBytes  7.95 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47440
+[  4] local 10.1.4.100 port 47440 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  48.0 GBytes  8.24 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  48.3 GBytes  8.30 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47448
+[  4] local 10.1.4.100 port 47448 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.1 GBytes  7.93 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.5 GBytes  7.98 Gbits/sec
+Connecting 10.1.4.38..
+no offload
+ssh -t danger38 sudo set_irq_affinity_cpulist.sh 0,0,0,0,0,0 enp94s0f1
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+ssh -t danger38 "cd /homes/borispi/bTestSuite/Apps/ssl/iperf; LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -s -X -p 4444 "
+------------------------------------------------------------
+Server listening on TCP port 4444
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+Running iperf client
+*********************************##################################
+LD_LIBRARY_PATH=/homes/borispi/bTestSuite/Apps/ssl/openssl taskset -c 0 /homes/borispi/linux/tools/perf/perf stat -D 10000 -a -C 0 -e task-clock,cycles,instructions,cache-misses -x, --append -o /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/perf_stat.txt /homes/borispi/bTestSuite/Apps/ssl/iperf/src/iperf -c 10.1.4.38 -l 262144 -t 50 --tls --ktls --ktls_record_size=4096 -p 4444 | tee -a /homes/borispi/Results/20_06_22_00.48.27/iperf_tx-4096-1-1-0/iperf.txt &
+------------------------------------------------------------
+Client connecting to 10.1.4.38, TCP port 4444
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  4] local 10.1.4.38 port 4444 connected with 10.1.4.100 port 47456
+[  4] local 10.1.4.100 port 47456 connected with 10.1.4.38 port 4444
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.1 GBytes  7.92 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-50.0 sec  46.4 GBytes  7.97 Gbits/sec

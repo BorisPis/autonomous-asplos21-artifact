@@ -1,0 +1,1152 @@
+Discovered irqs for enp4s0f1: 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135
+Assign irq 107 core_id 0
+Assign irq 108 core_id 0
+Assign irq 109 core_id 0
+Assign irq 110 core_id 0
+Assign irq 111 core_id 0
+Assign irq 112 core_id 0
+Assign irq 113 core_id 0
+Assign irq 114 core_id 0
+Assign irq 115 core_id 0
+Assign irq 116 core_id 0
+Assign irq 117 core_id 0
+Assign irq 118 core_id 0
+Assign irq 119 core_id 0
+Assign irq 120 core_id 0
+Assign irq 121 core_id 0
+Assign irq 122 core_id 0
+Assign irq 123 core_id 0
+Assign irq 124 core_id 0
+Assign irq 125 core_id 0
+Assign irq 126 core_id 0
+Assign irq 127 core_id 0
+Assign irq 128 core_id 0
+Assign irq 129 core_id 0
+Assign irq 130 core_id 0
+Assign irq 131 core_id 0
+Assign irq 132 core_id 0
+Assign irq 133 core_id 0
+Assign irq 134 core_id 0
+Assign irq 135 core_id 0
+
+done.
+Discovered irqs for enp94s0f1: 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+Assign irq 135 core_id 0
+Assign irq 136 core_id 0
+Assign irq 137 core_id 0
+Assign irq 138 core_id 0
+Assign irq 139 core_id 0
+Assign irq 140 core_id 0
+Assign irq 141 core_id 0
+Assign irq 142 core_id 0
+Assign irq 143 core_id 0
+Assign irq 144 core_id 0
+Assign irq 145 core_id 0
+Assign irq 146 core_id 0
+Assign irq 147 core_id 0
+Assign irq 148 core_id 0
+Assign irq 149 core_id 0
+Assign irq 150 core_id 0
+Assign irq 151 core_id 0
+Assign irq 152 core_id 0
+Assign irq 153 core_id 0
+Assign irq 154 core_id 0
+Assign irq 155 core_id 0
+Assign irq 156 core_id 0
+Assign irq 157 core_id 0
+Assign irq 158 core_id 0
+Assign irq 159 core_id 0
+
+done.
+268435456
+268435456
+268435456
+268435456
+268435456
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+Cannot get device udp-fragmentation-offload settings: Operation not supported
+0
+[+] Not using NVMETLS
+0
+0
+dip1=10.1.4.38
+disconnecting
+sudo nvme connect-all -t tcp -a 10.1.4.38 -s 4420 -G --nr-io-queues=1 --hostnqn=myhostnqn 
+using drive: nvme1n1
+2
+none
+1024
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33256960;1108528;17320;30001;3;1045491;39.859944;1451.620325;141;1046548;878.882268;5621.831801;1.000000%=354;5.000000%=481;10.000000%=561;20.000000%=659;30.000000%=724;40.000000%=790;50.000000%=839;60.000000%=897;70.000000%=962;80.000000%=1044;90.000000%=1155;95.000000%=1236;99.000000%=1351;99.500000%=1400;99.900000%=1482;99.950000%=1515;99.990000%=1597;0%=0;0%=0;0%=0;225;1046558;919.705658;5805.340516;114903;1168112;70.471163%;781192.568966;108677.437379;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.430000%;20.020000%;632614;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.09%;5.87%;27.69%;41.40%;24.95%;0.01%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1105769.042879] nvme nvme2: Removing ctrl: NQN "nqn.2014-08.org.nvmexpress.discovery"
+[1105769.979758] tee (10274): drop_caches: 3
+[1105770.215454] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1105829.445849] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1105849.490403] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1105849.503396] nvme_tcp: copy    0                0       5185063074                0                0                0
+[1105849.515482] nvme_tcp: copy    1                0                0                0                0                0
+[1105849.527563] nvme_tcp: copy    2                0                0                0                0                0
+[1105849.539638] nvme_tcp: copy    3                0                0                0                0                0
+[1105849.551722] nvme_tcp: copy    4                0                0                0                0                0
+[1105849.563806] nvme_tcp: copy    5                0                0                0                0                0
+[1105849.575889] nvme_tcp: copy    6                0                0                0                0                0
+[1105849.587973] nvme_tcp: copy    7                0                0                0                0                0
+[1105849.600056] nvme_tcp: copy    8                0                0                0                0                0
+[1105849.612139] nvme_tcp: copy    9                0                0                0                0                0
+[1105849.624221] nvme_tcp: copy   10                0                0                0                0                0
+[1105849.636305] nvme_tcp: copy   11                0                0                0                0                0
+[1105849.648387] nvme_tcp: copy   12                0                0                0                0                0
+[1105849.660566] nvme_tcp: copy   13                0                0                0                0                0
+[1105849.672650] nvme_tcp: copy   14                0                0                0                0                0
+[1105849.684734] nvme_tcp: copy   15                0                0                0                0                0
+[1105849.696817] nvme_tcp: copy   16                0                0                0                0                0
+[1105849.708905] nvme_tcp: copy   17                0                0                0                0                0
+[1105849.720989] nvme_tcp: copy   18                0                0                0                0                0
+[1105849.733072] nvme_tcp: copy   19                0                0                0                0                0
+[1105849.745155] nvme_tcp: copy   20                0                0                0                0                0
+[1105849.757240] nvme_tcp: copy   21                0                0                0                0                0
+[1105849.769323] nvme_tcp: copy   22                0                0                0                0                0
+[1105849.781407] nvme_tcp: copy   23                0                0                0                0                0
+[1105849.793489] nvme_tcp: copy   24                0                0                0                0                0
+[1105849.805573] nvme_tcp: copy   25                0                0                0                0                0
+[1105849.817656] nvme_tcp: copy   26                0                0                0                0                0
+[1105849.829740] nvme_tcp: copy   27                0                0                0                0                0
+[1105849.841824] nvme_tcp: crc    0                0       6436779392                0                0                0
+[1105849.853812] nvme_tcp: crc    1                0                0                0                0                0
+[1105849.865797] nvme_tcp: crc    2                0                0                0                0                0
+[1105849.887862] nvme_tcp: crc    3                0                0                0                0                0
+[1105849.899848] nvme_tcp: crc    4                0                0                0                0                0
+[1105849.911835] nvme_tcp: crc    5                0                0                0                0                0
+[1105849.923820] nvme_tcp: crc    6                0                0                0                0                0
+[1105849.935806] nvme_tcp: crc    7                0                0                0                0                0
+[1105849.947791] nvme_tcp: crc    8                0                0                0                0                0
+[1105849.959778] nvme_tcp: crc    9                0                0                0                0                0
+[1105849.971763] nvme_tcp: crc   10                0                0                0                0                0
+[1105849.983748] nvme_tcp: crc   11                0                0                0                0                0
+[1105849.995734] nvme_tcp: crc   12                0                0                0                0                0
+[1105850.007720] nvme_tcp: crc   13                0                0                0                0                0
+[1105850.019706] nvme_tcp: crc   14                0                0                0                0                0
+[1105850.031692] nvme_tcp: crc   15                0                0                0                0                0
+[1105850.043677] nvme_tcp: crc   16                0                0                0                0                0
+[1105850.055663] nvme_tcp: crc   17                0                0                0                0                0
+[1105850.067648] nvme_tcp: crc   18                0                0                0                0                0
+[1105850.079634] nvme_tcp: crc   19                0                0                0                0                0
+[1105850.091621] nvme_tcp: crc   20                0                0                0                0                0
+[1105850.103607] nvme_tcp: crc   21                0                0                0                0                0
+[1105850.115599] nvme_tcp: crc   22                0                0                0                0                0
+[1105850.127586] nvme_tcp: crc   23                0                0                0                0                0
+[1105850.139570] nvme_tcp: crc   24                0                0                0                0                0
+[1105850.151556] nvme_tcp: crc   25                0                0                0                0                0
+[1105850.163541] nvme_tcp: crc   26                0                0                0                0                0
+[1105850.175527] nvme_tcp: crc   27                0                0                0                0                0
+[1105850.187512] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1105850.199791] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1105850.212068] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1105850.224347] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1105850.236623] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1105850.248899] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1105850.261175] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1105850.273452] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1105850.285727] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1105850.298003] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1105850.310279] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1105850.322558] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1105850.334836] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1105850.347114] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1105850.359393] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1105850.371671] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1105850.383947] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1105850.396224] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1105850.408498] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1105850.420777] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1105850.433053] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1105850.445330] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1105850.457608] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1105850.469886] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1105850.482163] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1105850.494442] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1105850.506716] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1105850.518993] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1105850.531270] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33606208;1120169;17502;30001;3;1045492;39.992672;1444.100478;135;1046409;869.106084;5590.463479;1.000000%=350;5.000000%=477;10.000000%=561;20.000000%=651;30.000000%=724;40.000000%=782;50.000000%=831;60.000000%=888;70.000000%=946;80.000000%=1028;90.000000%=1138;95.000000%=1220;99.000000%=1335;99.500000%=1384;99.900000%=1466;99.950000%=1515;99.990000%=1597;0%=0;0%=0;0%=0;217;1046416;910.109813;5773.140869;41242;1175101;70.345780%;787991.620690;113912.403880;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.023333%;20.383333%;636406;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.09%;5.98%;28.64%;42.33%;22.96%;0.01%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1105850.531270] nvme_tcp: tracing_off done
+[1105885.327806] tee (12181): drop_caches: 3
+[1105885.502668] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1105944.691295] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1105964.735942] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1105964.748861] nvme_tcp: copy    0                0       5208534430                0                0                0
+[1105964.760947] nvme_tcp: copy    1                0                0                0                0                0
+[1105964.773033] nvme_tcp: copy    2                0                0                0                0                0
+[1105964.785120] nvme_tcp: copy    3                0                0                0                0                0
+[1105964.797203] nvme_tcp: copy    4                0                0                0                0                0
+[1105964.809287] nvme_tcp: copy    5                0                0                0                0                0
+[1105964.821374] nvme_tcp: copy    6                0                0                0                0                0
+[1105964.833458] nvme_tcp: copy    7                0                0                0                0                0
+[1105964.845543] nvme_tcp: copy    8                0                0                0                0                0
+[1105964.857627] nvme_tcp: copy    9                0                0                0                0                0
+[1105964.869712] nvme_tcp: copy   10                0                0                0                0                0
+[1105964.881796] nvme_tcp: copy   11                0                0                0                0                0
+[1105964.893878] nvme_tcp: copy   12                0                0                0                0                0
+[1105964.905963] nvme_tcp: copy   13                0                0                0                0                0
+[1105964.918047] nvme_tcp: copy   14                0                0                0                0                0
+[1105964.930132] nvme_tcp: copy   15                0                0                0                0                0
+[1105964.942217] nvme_tcp: copy   16                0                0                0                0                0
+[1105964.954305] nvme_tcp: copy   17                0                0                0                0                0
+[1105964.966389] nvme_tcp: copy   18                0                0                0                0                0
+[1105964.978472] nvme_tcp: copy   19                0                0                0                0                0
+[1105964.990556] nvme_tcp: copy   20                0                0                0                0                0
+[1105965.002639] nvme_tcp: copy   21                0                0                0                0                0
+[1105965.014724] nvme_tcp: copy   22                0                0                0                0                0
+[1105965.026807] nvme_tcp: copy   23                0                0                0                0                0
+[1105965.038891] nvme_tcp: copy   24                0                0                0                0                0
+[1105965.050974] nvme_tcp: copy   25                0                0                0                0                0
+[1105965.063059] nvme_tcp: copy   26                0                0                0                0                0
+[1105965.075141] nvme_tcp: copy   27                0                0                0                0                0
+[1105965.087226] nvme_tcp: crc    0                0       6463338064                0                0                0
+[1105965.099212] nvme_tcp: crc    1                0                0                0                0                0
+[1105965.111199] nvme_tcp: crc    2                0                0                0                0                0
+[1105965.123183] nvme_tcp: crc    3                0                0                0                0                0
+[1105965.135170] nvme_tcp: crc    4                0                0                0                0                0
+[1105965.157314] nvme_tcp: crc    5                0                0                0                0                0
+[1105965.169302] nvme_tcp: crc    6                0                0                0                0                0
+[1105965.181287] nvme_tcp: crc    7                0                0                0                0                0
+[1105965.193274] nvme_tcp: crc    8                0                0                0                0                0
+[1105965.205259] nvme_tcp: crc    9                0                0                0                0                0
+[1105965.217245] nvme_tcp: crc   10                0                0                0                0                0
+[1105965.229231] nvme_tcp: crc   11                0                0                0                0                0
+[1105965.241218] nvme_tcp: crc   12                0                0                0                0                0
+[1105965.253202] nvme_tcp: crc   13                0                0                0                0                0
+[1105965.265186] nvme_tcp: crc   14                0                0                0                0                0
+[1105965.277173] nvme_tcp: crc   15                0                0                0                0                0
+[1105965.289160] nvme_tcp: crc   16                0                0                0                0                0
+[1105965.301145] nvme_tcp: crc   17                0                0                0                0                0
+[1105965.313131] nvme_tcp: crc   18                0                0                0                0                0
+[1105965.325116] nvme_tcp: crc   19                0                0                0                0                0
+[1105965.337103] nvme_tcp: crc   20                0                0                0                0                0
+[1105965.349088] nvme_tcp: crc   21                0                0                0                0                0
+[1105965.361079] nvme_tcp: crc   22                0                0                0                0                0
+[1105965.373066] nvme_tcp: crc   23                0                0                0                0                0
+[1105965.385052] nvme_tcp: crc   24                0                0                0                0                0
+[1105965.397037] nvme_tcp: crc   25                0                0                0                0                0
+[1105965.409022] nvme_tcp: crc   26                0                0                0                0                0
+[1105965.421006] nvme_tcp: crc   27                0                0                0                0                0
+[1105965.432993] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1105965.445272] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1105965.457550] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1105965.469829] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1105965.482108] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1105965.494384] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1105965.506662] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1105965.518942] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1105965.531219] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1105965.543497] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1105965.555776] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1105965.568055] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1105965.580333] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1105965.592611] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1105965.604889] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1105965.617168] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1105965.629444] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1105965.641723] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1105965.654000] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1105965.666278] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1105965.678555] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1105965.690831] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1105965.703108] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1105965.715385] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1105965.727663] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1105965.739940] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1105965.752219] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1105965.764497] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1105965.776774] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33533888;1117759;17464;30001;3;1045371;40.472445;1445.492889;135;1046006;870.630518;5595.621358;1.000000%=354;5.000000%=481;10.000000%=561;20.000000%=659;30.000000%=724;40.000000%=782;50.000000%=831;60.000000%=888;70.000000%=946;80.000000%=1028;90.000000%=1138;95.000000%=1220;99.000000%=1335;99.500000%=1384;99.900000%=1466;99.950000%=1515;99.990000%=1597;0%=0;0%=0;0%=0;227;1046017;912.026790;5778.540550;97482;1184134;70.318960%;785996.500000;109886.422980;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.090000%;20.530000%;634647;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.08%;5.81%;28.47%;42.82%;22.82%;0.01%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1105965.776774] nvme_tcp: tracing_off done
+[1106000.539139] tee (14078): drop_caches: 3
+[1106000.748269] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106059.937075] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 160 
+[1106079.980712] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106079.993632] nvme_tcp: copy    0                0       5233422554                0                0                0
+[1106080.005718] nvme_tcp: copy    1                0                0                0                0                0
+[1106080.017799] nvme_tcp: copy    2                0                0                0                0                0
+[1106080.029877] nvme_tcp: copy    3                0                0                0                0                0
+[1106080.041959] nvme_tcp: copy    4                0                0                0                0                0
+[1106080.054045] nvme_tcp: copy    5                0                0                0                0                0
+[1106080.066145] nvme_tcp: copy    6                0                0                0                0                0
+[1106080.078232] nvme_tcp: copy    7                0                0                0                0                0
+[1106080.090316] nvme_tcp: copy    8                0                0                0                0                0
+[1106080.102400] nvme_tcp: copy    9                0                0                0                0                0
+[1106080.114483] nvme_tcp: copy   10                0                0                0                0                0
+[1106080.126566] nvme_tcp: copy   11                0                0                0                0                0
+[1106080.138653] nvme_tcp: copy   12                0                0                0                0                0
+[1106080.150737] nvme_tcp: copy   13                0                0                0                0                0
+[1106080.162820] nvme_tcp: copy   14                0                0                0                0                0
+[1106080.174905] nvme_tcp: copy   15                0                0                0                0                0
+[1106080.186989] nvme_tcp: copy   16                0                0                0                0                0
+[1106080.199073] nvme_tcp: copy   17                0                0                0                0                0
+[1106080.211160] nvme_tcp: copy   18                0                0                0                0                0
+[1106080.223244] nvme_tcp: copy   19                0                0                0                0                0
+[1106080.235327] nvme_tcp: copy   20                0                0                0                0                0
+[1106080.247409] nvme_tcp: copy   21                0                0                0                0                0
+[1106080.259492] nvme_tcp: copy   22                0                0                0                0                0
+[1106080.271575] nvme_tcp: copy   23                0                0                0                0                0
+[1106080.283660] nvme_tcp: copy   24                0                0                0                0                0
+[1106080.295742] nvme_tcp: copy   25                0                0                0                0                0
+[1106080.307827] nvme_tcp: copy   26                0                0                0                0                0
+[1106080.319910] nvme_tcp: copy   27                0                0                0                0                0
+[1106080.331993] nvme_tcp: crc    0                0       6490173738                0                0                0
+[1106080.343978] nvme_tcp: crc    1                0                0                0                0                0
+[1106080.355965] nvme_tcp: crc    2                0                0                0                0                0
+[1106080.367952] nvme_tcp: crc    3                0                0                0                0                0
+[1106080.379938] nvme_tcp: crc    4                0                0                0                0                0
+[1106080.391923] nvme_tcp: crc    5                0                0                0                0                0
+[1106080.403910] nvme_tcp: crc    6                0                0                0                0                0
+[1106080.426056] nvme_tcp: crc    7                0                0                0                0                0
+[1106080.438043] nvme_tcp: crc    8                0                0                0                0                0
+[1106080.450028] nvme_tcp: crc    9                0                0                0                0                0
+[1106080.462015] nvme_tcp: crc   10                0                0                0                0                0
+[1106080.474001] nvme_tcp: crc   11                0                0                0                0                0
+[1106080.485986] nvme_tcp: crc   12                0                0                0                0                0
+[1106080.497970] nvme_tcp: crc   13                0                0                0                0                0
+[1106080.509954] nvme_tcp: crc   14                0                0                0                0                0
+[1106080.521930] nvme_tcp: crc   15                0                0                0                0                0
+[1106080.533916] nvme_tcp: crc   16                0                0                0                0                0
+[1106080.545900] nvme_tcp: crc   17                0                0                0                0                0
+[1106080.557883] nvme_tcp: crc   18                0                0                0                0                0
+[1106080.569867] nvme_tcp: crc   19                0                0                0                0                0
+[1106080.581851] nvme_tcp: crc   20                0                0                0                0                0
+[1106080.593836] nvme_tcp: crc   21                0                0                0                0                0
+[1106080.605846] nvme_tcp: crc   22                0                0                0                0                0
+[1106080.617831] nvme_tcp: crc   23                0                0                0                0                0
+[1106080.629814] nvme_tcp: crc   24                0                0                0                0                0
+[1106080.641798] nvme_tcp: crc   25                0                0                0                0                0
+[1106080.653781] nvme_tcp: crc   26                0                0                0                0                0
+[1106080.665766] nvme_tcp: crc   27                0                0                0                0                0
+[1106080.677751] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106080.690025] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106080.702303] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106080.714580] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106080.726854] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106080.739131] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106080.751407] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106080.763682] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106080.775961] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106080.788235] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106080.800502] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106080.812776] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106080.825045] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106080.837323] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106080.849600] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106080.861874] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106080.874143] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106080.886418] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106080.898695] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106080.910971] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106080.923246] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106080.935522] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106080.947798] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106080.960073] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106080.972340] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106080.984617] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106080.996892] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106081.009170] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106081.021447] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33491712;1116353;17442;30001;3;681;38.624020;62.830335;144;1046144;871.618973;5599.687593;1.000000%=350;5.000000%=477;10.000000%=561;20.000000%=659;30.000000%=724;40.000000%=782;50.000000%=831;60.000000%=888;70.000000%=954;80.000000%=1028;90.000000%=1138;95.000000%=1220;99.000000%=1335;99.500000%=1384;99.900000%=1482;99.950000%=1515;99.990000%=1613;0%=0;0%=0;0%=0;216;1046151;911.248819;5599.306681;366561;1130337;70.360518%;785471.758621;91782.220575;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.140000%;20.583333%;633885;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.10%;6.00%;28.17%;42.41%;23.32%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1106081.021447] nvme_tcp: tracing_off done
+[1106115.710724] tee (15991): drop_caches: 3
+[1106115.830420] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106175.174488] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1106195.219063] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106195.232050] nvme_tcp: copy    0                0       5186925122                0                0                0
+[1106195.244128] nvme_tcp: copy    1                0                0                0                0                0
+[1106195.256208] nvme_tcp: copy    2                0                0                0                0                0
+[1106195.268291] nvme_tcp: copy    3                0                0                0                0                0
+[1106195.280373] nvme_tcp: copy    4                0                0                0                0                0
+[1106195.292460] nvme_tcp: copy    5                0                0                0                0                0
+[1106195.304543] nvme_tcp: copy    6                0                0                0                0                0
+[1106195.316629] nvme_tcp: copy    7                0                0                0                0                0
+[1106195.328711] nvme_tcp: copy    8                0                0                0                0                0
+[1106195.340796] nvme_tcp: copy    9                0                0                0                0                0
+[1106195.352879] nvme_tcp: copy   10                0                0                0                0                0
+[1106195.364965] nvme_tcp: copy   11                0                0                0                0                0
+[1106195.377047] nvme_tcp: copy   12                0                0                0                0                0
+[1106195.389132] nvme_tcp: copy   13                0                0                0                0                0
+[1106195.401215] nvme_tcp: copy   14                0                0                0                0                0
+[1106195.413300] nvme_tcp: copy   15                0                0                0                0                0
+[1106195.425389] nvme_tcp: copy   16                0                0                0                0                0
+[1106195.437464] nvme_tcp: copy   17                0                0                0                0                0
+[1106195.449548] nvme_tcp: copy   18                0                0                0                0                0
+[1106195.461631] nvme_tcp: copy   19                0                0                0                0                0
+[1106195.473715] nvme_tcp: copy   20                0                0                0                0                0
+[1106195.485799] nvme_tcp: copy   21                0                0                0                0                0
+[1106195.497883] nvme_tcp: copy   22                0                0                0                0                0
+[1106195.509967] nvme_tcp: copy   23                0                0                0                0                0
+[1106195.522051] nvme_tcp: copy   24                0                0                0                0                0
+[1106195.534135] nvme_tcp: copy   25                0                0                0                0                0
+[1106195.546219] nvme_tcp: copy   26                0                0                0                0                0
+[1106195.558303] nvme_tcp: copy   27                0                0                0                0                0
+[1106195.570386] nvme_tcp: crc    0                0       6450881466                0                0                0
+[1106195.582373] nvme_tcp: crc    1                0                0                0                0                0
+[1106195.594358] nvme_tcp: crc    2                0                0                0                0                0
+[1106195.606345] nvme_tcp: crc    3                0                0                0                0                0
+[1106195.618329] nvme_tcp: crc    4                0                0                0                0                0
+[1106195.630316] nvme_tcp: crc    5                0                0                0                0                0
+[1106195.642301] nvme_tcp: crc    6                0                0                0                0                0
+[1106195.654287] nvme_tcp: crc    7                0                0                0                0                0
+[1106195.666273] nvme_tcp: crc    8                0                0                0                0                0
+[1106195.688408] nvme_tcp: crc    9                0                0                0                0                0
+[1106195.700392] nvme_tcp: crc   10                0                0                0                0                0
+[1106195.712378] nvme_tcp: crc   11                0                0                0                0                0
+[1106195.724364] nvme_tcp: crc   12                0                0                0                0                0
+[1106195.736350] nvme_tcp: crc   13                0                0                0                0                0
+[1106195.748335] nvme_tcp: crc   14                0                0                0                0                0
+[1106195.760321] nvme_tcp: crc   15                0                0                0                0                0
+[1106195.772305] nvme_tcp: crc   16                0                0                0                0                0
+[1106195.784292] nvme_tcp: crc   17                0                0                0                0                0
+[1106195.796277] nvme_tcp: crc   18                0                0                0                0                0
+[1106195.808263] nvme_tcp: crc   19                0                0                0                0                0
+[1106195.820248] nvme_tcp: crc   20                0                0                0                0                0
+[1106195.832234] nvme_tcp: crc   21                0                0                0                0                0
+[1106195.844228] nvme_tcp: crc   22                0                0                0                0                0
+[1106195.856212] nvme_tcp: crc   23                0                0                0                0                0
+[1106195.868194] nvme_tcp: crc   24                0                0                0                0                0
+[1106195.880173] nvme_tcp: crc   25                0                0                0                0                0
+[1106195.892159] nvme_tcp: crc   26                0                0                0                0                0
+[1106195.904145] nvme_tcp: crc   27                0                0                0                0                0
+[1106195.916130] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106195.928409] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106195.940687] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106195.952965] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106195.965242] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106195.977521] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106195.989797] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106196.002073] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106196.014351] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106196.026628] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106196.038906] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106196.051183] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106196.063458] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106196.075737] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106196.088017] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106196.100373] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106196.112652] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106196.124930] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106196.137206] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106196.149485] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106196.161760] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106196.174037] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106196.186312] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106196.198591] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106196.210867] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106196.223145] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106196.235423] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106196.247701] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106196.259979] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33396608;1113183;17392;30001;3;662;38.301490;62.347916;136;1046233;876.511127;5791.915362;1.000000%=354;5.000000%=481;10.000000%=561;20.000000%=659;30.000000%=724;40.000000%=782;50.000000%=839;60.000000%=888;70.000000%=954;80.000000%=1036;90.000000%=1155;95.000000%=1220;99.000000%=1351;99.500000%=1384;99.900000%=1482;99.950000%=1515;99.990000%=1613;0%=0;0%=0;0%=0;240;1046243;915.816675;5791.477882;258612;1123635;70.290306%;782459.741379;97131.304497;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.170000%;20.600000%;633092;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.09%;5.85%;27.90%;42.48%;23.68%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1106196.259979] nvme_tcp: tracing_off done
+[1106230.905245] tee (17941): drop_caches: 3
+[1106231.026529] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106290.411557] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1106310.456275] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106310.469232] nvme_tcp: copy    0                0       5210327436                0                0                0
+[1106310.481317] nvme_tcp: copy    1                0                0                0                0                0
+[1106310.493489] nvme_tcp: copy    2                0                0                0                0                0
+[1106310.505571] nvme_tcp: copy    3                0                0                0                0                0
+[1106310.517652] nvme_tcp: copy    4                0                0                0                0                0
+[1106310.529735] nvme_tcp: copy    5                0                0                0                0                0
+[1106310.541816] nvme_tcp: copy    6                0                0                0                0                0
+[1106310.553903] nvme_tcp: copy    7                0                0                0                0                0
+[1106310.565986] nvme_tcp: copy    8                0                0                0                0                0
+[1106310.578070] nvme_tcp: copy    9                0                0                0                0                0
+[1106310.590152] nvme_tcp: copy   10                0                0                0                0                0
+[1106310.602237] nvme_tcp: copy   11                0                0                0                0                0
+[1106310.614319] nvme_tcp: copy   12                0                0                0                0                0
+[1106310.626404] nvme_tcp: copy   13                0                0                0                0                0
+[1106310.638487] nvme_tcp: copy   14                0                0                0                0                0
+[1106310.650572] nvme_tcp: copy   15                0                0                0                0                0
+[1106310.662656] nvme_tcp: copy   16                0                0                0                0                0
+[1106310.674743] nvme_tcp: copy   17                0                0                0                0                0
+[1106310.686827] nvme_tcp: copy   18                0                0                0                0                0
+[1106310.698911] nvme_tcp: copy   19                0                0                0                0                0
+[1106310.710994] nvme_tcp: copy   20                0                0                0                0                0
+[1106310.723078] nvme_tcp: copy   21                0                0                0                0                0
+[1106310.735161] nvme_tcp: copy   22                0                0                0                0                0
+[1106310.747246] nvme_tcp: copy   23                0                0                0                0                0
+[1106310.759329] nvme_tcp: copy   24                0                0                0                0                0
+[1106310.771413] nvme_tcp: copy   25                0                0                0                0                0
+[1106310.783497] nvme_tcp: copy   26                0                0                0                0                0
+[1106310.795581] nvme_tcp: copy   27                0                0                0                0                0
+[1106310.807665] nvme_tcp: crc    0                0       6467140722                0                0                0
+[1106310.819650] nvme_tcp: crc    1                0                0                0                0                0
+[1106310.831637] nvme_tcp: crc    2                0                0                0                0                0
+[1106310.843623] nvme_tcp: crc    3                0                0                0                0                0
+[1106310.855608] nvme_tcp: crc    4                0                0                0                0                0
+[1106310.867595] nvme_tcp: crc    5                0                0                0                0                0
+[1106310.879581] nvme_tcp: crc    6                0                0                0                0                0
+[1106310.891567] nvme_tcp: crc    7                0                0                0                0                0
+[1106310.903553] nvme_tcp: crc    8                0                0                0                0                0
+[1106310.915539] nvme_tcp: crc    9                0                0                0                0                0
+[1106310.927525] nvme_tcp: crc   10                0                0                0                0                0
+[1106310.949672] nvme_tcp: crc   11                0                0                0                0                0
+[1106310.961659] nvme_tcp: crc   12                0                0                0                0                0
+[1106310.973644] nvme_tcp: crc   13                0                0                0                0                0
+[1106310.985629] nvme_tcp: crc   14                0                0                0                0                0
+[1106310.997616] nvme_tcp: crc   15                0                0                0                0                0
+[1106311.009602] nvme_tcp: crc   16                0                0                0                0                0
+[1106311.021587] nvme_tcp: crc   17                0                0                0                0                0
+[1106311.033571] nvme_tcp: crc   18                0                0                0                0                0
+[1106311.045556] nvme_tcp: crc   19                0                0                0                0                0
+[1106311.057541] nvme_tcp: crc   20                0                0                0                0                0
+[1106311.069527] nvme_tcp: crc   21                0                0                0                0                0
+[1106311.081516] nvme_tcp: crc   22                0                0                0                0                0
+[1106311.093502] nvme_tcp: crc   23                0                0                0                0                0
+[1106311.105486] nvme_tcp: crc   24                0                0                0                0                0
+[1106311.117472] nvme_tcp: crc   25                0                0                0                0                0
+[1106311.129456] nvme_tcp: crc   26                0                0                0                0                0
+[1106311.141442] nvme_tcp: crc   27                0                0                0                0                0
+[1106311.153426] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106311.165694] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106311.177970] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106311.190246] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106311.202521] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106311.214797] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106311.227073] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106311.239348] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106311.251623] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106311.263902] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106311.276177] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106311.288452] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106311.300727] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106311.313005] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106311.325282] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106311.337558] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106311.349833] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106311.362110] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106311.374385] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106311.386663] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106311.398938] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106311.411214] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106311.423489] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106311.435768] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106311.448042] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106311.460321] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106311.472598] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106311.484877] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106311.497153] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33391040;1112997;17390;30001;3;696;38.342247;62.590342;136;1046834;876.745480;5793.948186;1.000000%=350;5.000000%=477;10.000000%=561;20.000000%=659;30.000000%=724;40.000000%=782;50.000000%=839;60.000000%=888;70.000000%=954;80.000000%=1036;90.000000%=1155;95.000000%=1220;99.000000%=1351;99.500000%=1384;99.900000%=1482;99.950000%=1515;99.990000%=1630;0%=0;0%=0;0%=0;218;1046843;915.992291;5793.440665;53376;1190597;70.272286%;782128.431034;114572.271957;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.046667%;20.446667%;632125;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.09%;5.95%;27.99%;41.96%;24.01%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1106311.497153] nvme_tcp: tracing_off done
+[1106346.269509] tee (19845): drop_caches: 3
+[1106346.476575] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106405.666073] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1106425.710424] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106425.723520] nvme_tcp: copy    0                0       5201552482                0                0                0
+[1106425.735607] nvme_tcp: copy    1                0                0                0                0                0
+[1106425.747689] nvme_tcp: copy    2                0                0                0                0                0
+[1106425.759772] nvme_tcp: copy    3                0                0                0                0                0
+[1106425.771850] nvme_tcp: copy    4                0                0                0                0                0
+[1106425.783930] nvme_tcp: copy    5                0                0                0                0                0
+[1106425.796011] nvme_tcp: copy    6                0                0                0                0                0
+[1106425.808091] nvme_tcp: copy    7                0                0                0                0                0
+[1106425.820176] nvme_tcp: copy    8                0                0                0                0                0
+[1106425.832257] nvme_tcp: copy    9                0                0                0                0                0
+[1106425.844340] nvme_tcp: copy   10                0                0                0                0                0
+[1106425.856423] nvme_tcp: copy   11                0                0                0                0                0
+[1106425.868506] nvme_tcp: copy   12                0                0                0                0                0
+[1106425.880589] nvme_tcp: copy   13                0                0                0                0                0
+[1106425.892671] nvme_tcp: copy   14                0                0                0                0                0
+[1106425.904754] nvme_tcp: copy   15                0                0                0                0                0
+[1106425.916837] nvme_tcp: copy   16                0                0                0                0                0
+[1106425.928920] nvme_tcp: copy   17                0                0                0                0                0
+[1106425.941004] nvme_tcp: copy   18                0                0                0                0                0
+[1106425.953086] nvme_tcp: copy   19                0                0                0                0                0
+[1106425.965170] nvme_tcp: copy   20                0                0                0                0                0
+[1106425.977253] nvme_tcp: copy   21                0                0                0                0                0
+[1106425.989336] nvme_tcp: copy   22                0                0                0                0                0
+[1106426.001418] nvme_tcp: copy   23                0                0                0                0                0
+[1106426.013501] nvme_tcp: copy   24                0                0                0                0                0
+[1106426.025659] nvme_tcp: copy   25                0                0                0                0                0
+[1106426.037741] nvme_tcp: copy   26                0                0                0                0                0
+[1106426.049826] nvme_tcp: copy   27                0                0                0                0                0
+[1106426.061908] nvme_tcp: crc    0                0       6470076036                0                0                0
+[1106426.073894] nvme_tcp: crc    1                0                0                0                0                0
+[1106426.085879] nvme_tcp: crc    2                0                0                0                0                0
+[1106426.097864] nvme_tcp: crc    3                0                0                0                0                0
+[1106426.109849] nvme_tcp: crc    4                0                0                0                0                0
+[1106426.121833] nvme_tcp: crc    5                0                0                0                0                0
+[1106426.133819] nvme_tcp: crc    6                0                0                0                0                0
+[1106426.145804] nvme_tcp: crc    7                0                0                0                0                0
+[1106426.157789] nvme_tcp: crc    8                0                0                0                0                0
+[1106426.169774] nvme_tcp: crc    9                0                0                0                0                0
+[1106426.181759] nvme_tcp: crc   10                0                0                0                0                0
+[1106426.193744] nvme_tcp: crc   11                0                0                0                0                0
+[1106426.205728] nvme_tcp: crc   12                0                0                0                0                0
+[1106426.227873] nvme_tcp: crc   13                0                0                0                0                0
+[1106426.239857] nvme_tcp: crc   14                0                0                0                0                0
+[1106426.251842] nvme_tcp: crc   15                0                0                0                0                0
+[1106426.263827] nvme_tcp: crc   16                0                0                0                0                0
+[1106426.275812] nvme_tcp: crc   17                0                0                0                0                0
+[1106426.287798] nvme_tcp: crc   18                0                0                0                0                0
+[1106426.299782] nvme_tcp: crc   19                0                0                0                0                0
+[1106426.311767] nvme_tcp: crc   20                0                0                0                0                0
+[1106426.323751] nvme_tcp: crc   21                0                0                0                0                0
+[1106426.335728] nvme_tcp: crc   22                0                0                0                0                0
+[1106426.347713] nvme_tcp: crc   23                0                0                0                0                0
+[1106426.359698] nvme_tcp: crc   24                0                0                0                0                0
+[1106426.371682] nvme_tcp: crc   25                0                0                0                0                0
+[1106426.383664] nvme_tcp: crc   26                0                0                0                0                0
+[1106426.395647] nvme_tcp: crc   27                0                0                0                0                0
+[1106426.407632] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106426.419909] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106426.432185] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106426.444461] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106426.456728] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106426.469008] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106426.481283] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106426.493558] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106426.505834] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106426.518102] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106426.530380] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106426.542654] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106426.554930] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106426.567205] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106426.579482] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106426.591757] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106426.604034] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106426.616311] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106426.628586] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106426.640864] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106426.653141] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106426.665416] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106426.677694] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106426.689972] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106426.702247] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106426.714522] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106426.726798] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106426.739075] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106426.751354] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33374592;1112412;17380;30002;3;1045605;40.506925;1449.263728;141;1046316;874.948406;5610.494300;1.000000%=350;5.000000%=477;10.000000%=561;20.000000%=659;30.000000%=724;40.000000%=782;50.000000%=839;60.000000%=897;70.000000%=954;80.000000%=1036;90.000000%=1155;95.000000%=1236;99.000000%=1351;99.500000%=1384;99.900000%=1482;99.950000%=1515;99.990000%=1613;0%=0;0%=0;0%=0;223;1046323;916.436962;5793.638964;50815;1182831;70.417902%;783337.189655;115337.906448;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.419853%;20.285990%;633181;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.09%;6.12%;27.87%;41.67%;24.24%;0.01%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1106426.751354] nvme_tcp: tracing_off done
+[1106461.555842] tee (21746): drop_caches: 3
+[1106461.705522] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106520.903001] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1106540.950039] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106540.963019] nvme_tcp: copy    0                0       5211657064                0                0                0
+[1106540.975103] nvme_tcp: copy    1                0                0                0                0                0
+[1106540.987184] nvme_tcp: copy    2                0                0                0                0                0
+[1106540.999256] nvme_tcp: copy    3                0                0                0                0                0
+[1106541.011337] nvme_tcp: copy    4                0                0                0                0                0
+[1106541.023419] nvme_tcp: copy    5                0                0                0                0                0
+[1106541.035498] nvme_tcp: copy    6                0                0                0                0                0
+[1106541.047579] nvme_tcp: copy    7                0                0                0                0                0
+[1106541.059660] nvme_tcp: copy    8                0                0                0                0                0
+[1106541.071741] nvme_tcp: copy    9                0                0                0                0                0
+[1106541.083826] nvme_tcp: copy   10                0                0                0                0                0
+[1106541.095909] nvme_tcp: copy   11                0                0                0                0                0
+[1106541.107991] nvme_tcp: copy   12                0                0                0                0                0
+[1106541.120076] nvme_tcp: copy   13                0                0                0                0                0
+[1106541.132159] nvme_tcp: copy   14                0                0                0                0                0
+[1106541.144243] nvme_tcp: copy   15                0                0                0                0                0
+[1106541.156327] nvme_tcp: copy   16                0                0                0                0                0
+[1106541.168417] nvme_tcp: copy   17                0                0                0                0                0
+[1106541.180500] nvme_tcp: copy   18                0                0                0                0                0
+[1106541.192581] nvme_tcp: copy   19                0                0                0                0                0
+[1106541.204667] nvme_tcp: copy   20                0                0                0                0                0
+[1106541.216750] nvme_tcp: copy   21                0                0                0                0                0
+[1106541.228834] nvme_tcp: copy   22                0                0                0                0                0
+[1106541.240916] nvme_tcp: copy   23                0                0                0                0                0
+[1106541.253000] nvme_tcp: copy   24                0                0                0                0                0
+[1106541.265084] nvme_tcp: copy   25                0                0                0                0                0
+[1106541.277168] nvme_tcp: copy   26                0                0                0                0                0
+[1106541.289249] nvme_tcp: copy   27                0                0                0                0                0
+[1106541.301332] nvme_tcp: crc    0                0       6470493488                0                0                0
+[1106541.313317] nvme_tcp: crc    1                0                0                0                0                0
+[1106541.325304] nvme_tcp: crc    2                0                0                0                0                0
+[1106541.337289] nvme_tcp: crc    3                0                0                0                0                0
+[1106541.349275] nvme_tcp: crc    4                0                0                0                0                0
+[1106541.361261] nvme_tcp: crc    5                0                0                0                0                0
+[1106541.373247] nvme_tcp: crc    6                0                0                0                0                0
+[1106541.385234] nvme_tcp: crc    7                0                0                0                0                0
+[1106541.397220] nvme_tcp: crc    8                0                0                0                0                0
+[1106541.409205] nvme_tcp: crc    9                0                0                0                0                0
+[1106541.421191] nvme_tcp: crc   10                0                0                0                0                0
+[1106541.433177] nvme_tcp: crc   11                0                0                0                0                0
+[1106541.445164] nvme_tcp: crc   12                0                0                0                0                0
+[1106541.457151] nvme_tcp: crc   13                0                0                0                0                0
+[1106541.469137] nvme_tcp: crc   14                0                0                0                0                0
+[1106541.491283] nvme_tcp: crc   15                0                0                0                0                0
+[1106541.503270] nvme_tcp: crc   16                0                0                0                0                0
+[1106541.515257] nvme_tcp: crc   17                0                0                0                0                0
+[1106541.527243] nvme_tcp: crc   18                0                0                0                0                0
+[1106541.539229] nvme_tcp: crc   19                0                0                0                0                0
+[1106541.551217] nvme_tcp: crc   20                0                0                0                0                0
+[1106541.563202] nvme_tcp: crc   21                0                0                0                0                0
+[1106541.575193] nvme_tcp: crc   22                0                0                0                0                0
+[1106541.587178] nvme_tcp: crc   23                0                0                0                0                0
+[1106541.599166] nvme_tcp: crc   24                0                0                0                0                0
+[1106541.611153] nvme_tcp: crc   25                0                0                0                0                0
+[1106541.623139] nvme_tcp: crc   26                0                0                0                0                0
+[1106541.635122] nvme_tcp: crc   27                0                0                0                0                0
+[1106541.647106] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106541.659379] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106541.671674] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106541.683954] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106541.696232] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106541.708508] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106541.720786] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106541.733063] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106541.745340] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106541.757616] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106541.769891] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106541.782166] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106541.794444] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106541.806720] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106541.818996] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106541.831275] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106541.843554] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106541.855830] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106541.868109] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106541.880387] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106541.892663] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106541.904939] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106541.917217] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106541.929495] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106541.941771] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106541.954047] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106541.966323] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106541.978598] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106541.990874] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33302720;1110053;17344;30001;3;662;38.289517;62.789698;136;1046351;877.300804;5616.412388;1.000000%=350;5.000000%=477;10.000000%=561;20.000000%=659;30.000000%=724;40.000000%=790;50.000000%=839;60.000000%=897;70.000000%=962;80.000000%=1044;90.000000%=1155;95.000000%=1236;99.000000%=1351;99.500000%=1384;99.900000%=1482;99.950000%=1515;99.990000%=1597;0%=0;0%=0;0%=0;237;1046358;916.519783;5615.932183;209438;1172465;70.328686%;780685.689655;101663.524050;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;3.770000%;20.413333%;631737;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.10%;6.05%;27.59%;41.53%;24.72%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1106541.990874] nvme_tcp: tracing_off done
+[1106576.792078] tee (23655): drop_caches: 3
+[1106576.992808] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106636.141297] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1106656.460922] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106656.473881] nvme_tcp: copy    0                0       5265048308                0                0                0
+[1106656.485965] nvme_tcp: copy    1                0                0                0                0                0
+[1106656.498046] nvme_tcp: copy    2                0                0                0                0                0
+[1106656.510128] nvme_tcp: copy    3                0                0                0                0                0
+[1106656.522209] nvme_tcp: copy    4                0                0                0                0                0
+[1106656.534291] nvme_tcp: copy    5                0                0                0                0                0
+[1106656.546372] nvme_tcp: copy    6                0                0                0                0                0
+[1106656.558454] nvme_tcp: copy    7                0                0                0                0                0
+[1106656.570550] nvme_tcp: copy    8                0                0                0                0                0
+[1106656.582635] nvme_tcp: copy    9                0                0                0                0                0
+[1106656.594718] nvme_tcp: copy   10                0                0                0                0                0
+[1106656.606800] nvme_tcp: copy   11                0                0                0                0                0
+[1106656.618881] nvme_tcp: copy   12                0                0                0                0                0
+[1106656.630955] nvme_tcp: copy   13                0                0                0                0                0
+[1106656.643038] nvme_tcp: copy   14                0                0                0                0                0
+[1106656.655121] nvme_tcp: copy   15                0                0                0                0                0
+[1106656.667206] nvme_tcp: copy   16                0                0                0                0                0
+[1106656.679292] nvme_tcp: copy   17                0                0                0                0                0
+[1106656.691377] nvme_tcp: copy   18                0                0                0                0                0
+[1106656.703464] nvme_tcp: copy   19                0                0                0                0                0
+[1106656.715547] nvme_tcp: copy   20                0                0                0                0                0
+[1106656.727631] nvme_tcp: copy   21                0                0                0                0                0
+[1106656.739716] nvme_tcp: copy   22                0                0                0                0                0
+[1106656.751800] nvme_tcp: copy   23                0                0                0                0                0
+[1106656.763884] nvme_tcp: copy   24                0                0                0                0                0
+[1106656.775968] nvme_tcp: copy   25                0                0                0                0                0
+[1106656.788051] nvme_tcp: copy   26                0                0                0                0                0
+[1106656.800135] nvme_tcp: copy   27                0                0                0                0                0
+[1106656.812218] nvme_tcp: crc    0                0       6549408996                0                0                0
+[1106656.824204] nvme_tcp: crc    1                0                0                0                0                0
+[1106656.836191] nvme_tcp: crc    2                0                0                0                0                0
+[1106656.848176] nvme_tcp: crc    3                0                0                0                0                0
+[1106656.860163] nvme_tcp: crc    4                0                0                0                0                0
+[1106656.872150] nvme_tcp: crc    5                0                0                0                0                0
+[1106656.884135] nvme_tcp: crc    6                0                0                0                0                0
+[1106656.896122] nvme_tcp: crc    7                0                0                0                0                0
+[1106656.908106] nvme_tcp: crc    8                0                0                0                0                0
+[1106656.920093] nvme_tcp: crc    9                0                0                0                0                0
+[1106656.932080] nvme_tcp: crc   10                0                0                0                0                0
+[1106656.944065] nvme_tcp: crc   11                0                0                0                0                0
+[1106656.956050] nvme_tcp: crc   12                0                0                0                0                0
+[1106656.968037] nvme_tcp: crc   13                0                0                0                0                0
+[1106656.980023] nvme_tcp: crc   14                0                0                0                0                0
+[1106656.992010] nvme_tcp: crc   15                0                0                0                0                0
+[1106657.003995] nvme_tcp: crc   16                0                0                0                0                0
+[1106657.026132] nvme_tcp: crc   17                0                0                0                0                0
+[1106657.038117] nvme_tcp: crc   18                0                0                0                0                0
+[1106657.050104] nvme_tcp: crc   19                0                0                0                0                0
+[1106657.062089] nvme_tcp: crc   20                0                0                0                0                0
+[1106657.074075] nvme_tcp: crc   21                0                0                0                0                0
+[1106657.086066] nvme_tcp: crc   22                0                0                0                0                0
+[1106657.098051] nvme_tcp: crc   23                0                0                0                0                0
+[1106657.110038] nvme_tcp: crc   24                0                0                0                0                0
+[1106657.122024] nvme_tcp: crc   25                0                0                0                0                0
+[1106657.134010] nvme_tcp: crc   26                0                0                0                0                0
+[1106657.145996] nvme_tcp: crc   27                0                0                0                0                0
+[1106657.157982] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106657.170261] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106657.182540] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106657.194816] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106657.207090] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106657.219358] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106657.231629] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106657.243906] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106657.256179] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106657.268453] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106657.280730] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106657.293007] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106657.305281] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106657.317648] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106657.329924] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106657.342198] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106657.354464] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106657.366738] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106657.379011] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106657.391288] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106657.403561] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106657.415835] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106657.428111] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106657.440378] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106657.452655] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106657.464932] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106657.477206] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106657.489482] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106657.501756] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33515520;1117146;17454;30001;3;1045317;40.402057;1445.813912;141;1046412;871.154142;5599.056863;1.000000%=350;5.000000%=477;10.000000%=561;20.000000%=651;30.000000%=724;40.000000%=782;50.000000%=831;60.000000%=888;70.000000%=946;80.000000%=1028;90.000000%=1138;95.000000%=1220;99.000000%=1335;99.500000%=1384;99.900000%=1466;99.950000%=1515;99.990000%=1613;0%=0;0%=0;0%=0;230;1046515;912.481095;5782.058674;715001;1149486;71.605752%;799940.789474;54640.374074;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.346667%;20.200000%;635590;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.10%;5.96%;28.18%;42.42%;23.35%;0.01%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1106657.501756] nvme_tcp: tracing_off done
+[1106692.322251] tee (25545): drop_caches: 3
+[1106692.504915] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106751.660769] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1106771.713863] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106771.726749] nvme_tcp: copy    0                0       5250287058                0                0                0
+[1106771.738834] nvme_tcp: copy    1                0                0                0                0                0
+[1106771.750914] nvme_tcp: copy    2                0                0                0                0                0
+[1106771.762997] nvme_tcp: copy    3                0                0                0                0                0
+[1106771.775083] nvme_tcp: copy    4                0                0                0                0                0
+[1106771.787166] nvme_tcp: copy    5                0                0                0                0                0
+[1106771.799248] nvme_tcp: copy    6                0                0                0                0                0
+[1106771.811331] nvme_tcp: copy    7                0                0                0                0                0
+[1106771.823416] nvme_tcp: copy    8                0                0                0                0                0
+[1106771.835500] nvme_tcp: copy    9                0                0                0                0                0
+[1106771.847583] nvme_tcp: copy   10                0                0                0                0                0
+[1106771.859666] nvme_tcp: copy   11                0                0                0                0                0
+[1106771.871749] nvme_tcp: copy   12                0                0                0                0                0
+[1106771.883833] nvme_tcp: copy   13                0                0                0                0                0
+[1106771.895936] nvme_tcp: copy   14                0                0                0                0                0
+[1106771.908019] nvme_tcp: copy   15                0                0                0                0                0
+[1106771.920101] nvme_tcp: copy   16                0                0                0                0                0
+[1106771.932191] nvme_tcp: copy   17                0                0                0                0                0
+[1106771.944274] nvme_tcp: copy   18                0                0                0                0                0
+[1106771.956356] nvme_tcp: copy   19                0                0                0                0                0
+[1106771.968439] nvme_tcp: copy   20                0                0                0                0                0
+[1106771.980522] nvme_tcp: copy   21                0                0                0                0                0
+[1106771.992606] nvme_tcp: copy   22                0                0                0                0                0
+[1106772.004690] nvme_tcp: copy   23                0                0                0                0                0
+[1106772.016773] nvme_tcp: copy   24                0                0                0                0                0
+[1106772.028856] nvme_tcp: copy   25                0                0                0                0                0
+[1106772.040940] nvme_tcp: copy   26                0                0                0                0                0
+[1106772.053022] nvme_tcp: copy   27                0                0                0                0                0
+[1106772.065106] nvme_tcp: crc    0                0       6540559278                0                0                0
+[1106772.077091] nvme_tcp: crc    1                0                0                0                0                0
+[1106772.089077] nvme_tcp: crc    2                0                0                0                0                0
+[1106772.101062] nvme_tcp: crc    3                0                0                0                0                0
+[1106772.113048] nvme_tcp: crc    4                0                0                0                0                0
+[1106772.125034] nvme_tcp: crc    5                0                0                0                0                0
+[1106772.137020] nvme_tcp: crc    6                0                0                0                0                0
+[1106772.149005] nvme_tcp: crc    7                0                0                0                0                0
+[1106772.160990] nvme_tcp: crc    8                0                0                0                0                0
+[1106772.172975] nvme_tcp: crc    9                0                0                0                0                0
+[1106772.184962] nvme_tcp: crc   10                0                0                0                0                0
+[1106772.196948] nvme_tcp: crc   11                0                0                0                0                0
+[1106772.208933] nvme_tcp: crc   12                0                0                0                0                0
+[1106772.220917] nvme_tcp: crc   13                0                0                0                0                0
+[1106772.232903] nvme_tcp: crc   14                0                0                0                0                0
+[1106772.244889] nvme_tcp: crc   15                0                0                0                0                0
+[1106772.256875] nvme_tcp: crc   16                0                0                0                0                0
+[1106772.268862] nvme_tcp: crc   17                0                0                0                0                0
+[1106772.280848] nvme_tcp: crc   18                0                0                0                0                0
+[1106772.302966] nvme_tcp: crc   19                0                0                0                0                0
+[1106772.314953] nvme_tcp: crc   20                0                0                0                0                0
+[1106772.326936] nvme_tcp: crc   21                0                0                0                0                0
+[1106772.338942] nvme_tcp: crc   22                0                0                0                0                0
+[1106772.350923] nvme_tcp: crc   23                0                0                0                0                0
+[1106772.362906] nvme_tcp: crc   24                0                0                0                0                0
+[1106772.374890] nvme_tcp: crc   25                0                0                0                0                0
+[1106772.386871] nvme_tcp: crc   26                0                0                0                0                0
+[1106772.398855] nvme_tcp: crc   27                0                0                0                0                0
+[1106772.410829] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106772.423103] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106772.435380] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106772.447654] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106772.459921] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106772.472196] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106772.484472] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106772.496752] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106772.509028] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106772.521307] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106772.533582] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106772.545861] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106772.558139] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106772.570417] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106772.582695] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106772.594971] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106772.607245] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106772.619522] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106772.631799] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106772.644075] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106772.656353] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106772.668632] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106772.680908] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106772.693199] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106772.705474] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106772.717743] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106772.730019] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106772.742298] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106772.754574] nvme_tcp: tracing_off done
+Using copy
+Using /dev/$nvme1
+Connecting 10.1.4.38..
+Using /dev/nvme1n1
+Set copy..
+0
+0
+0
+3
+=== /dev/nvme1n1 ============================================
+Running benchmark randread with I/O depth of 16 numjobs 1 blocksize 64K zerocopy 0
+fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio
+Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+sudo -E /homes/borispi/linux/tools/perf/perf stat -D 60000 -a -C 0 -e cycles,instructions,cache-misses x, -o /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/perf_stat.txt --append sudo -E DIRECT=1 RW=randread FILE=/dev/nvme1n1 IODEPTH=16 NUMJOBS=1 NAME=randread-16-1-64K-0-0 BLOCKSIZE=64K OUTPUT=/homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1 RUNTIME=30 fio /homes/borispi/bTestSuite//Tests/fio/random-io-template.fio --ramp_time=60 --output-format=terse --terse-version=2 | tee -a /homes/borispi/Results/20_06_07_12.13.29/fio-64K-16-0-0-1/fio.terse &
+waiting for fio
+2;randread-16-1-64K-0-0;0;0;33447616;1114883;17419;30001;3;1045472;39.895735;1447.500531;140;1046436;873.598387;5605.450046;1.000000%=346;5.000000%=473;10.000000%=552;20.000000%=651;30.000000%=724;40.000000%=782;50.000000%=839;60.000000%=897;70.000000%=954;80.000000%=1036;90.000000%=1155;95.000000%=1220;99.000000%=1335;99.500000%=1384;99.900000%=1482;99.950000%=1515;99.990000%=1613;0%=0;0%=0;0%=0;225;1046444;914.390541;5788.234940;110735;1163130;70.288775%;783637.603448;107716.792775;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;0;0;0;0;0;0;0.000000;0.000000;0;0;0.000000;0.000000;1.000000%=0;5.000000%=0;10.000000%=0;20.000000%=0;30.000000%=0;40.000000%=0;50.000000%=0;60.000000%=0;70.000000%=0;80.000000%=0;90.000000%=0;95.000000%=0;99.000000%=0;99.500000%=0;99.900000%=0;99.950000%=0;99.990000%=0;0%=0;0%=0;0%=0;0;0;0.000000;0.000000;0;0;0.000000%;0.000000;0.000000;4.376667%;19.906667%;633414;0;16;0.0%;0.0%;0.0%;0.0%;100.0%;0.0%;0.0%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.11%;6.33%;28.01%;41.05%;24.51%;0.01%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.00%;0.01%;0.00%
+;randread-depth-16-size-64K-zcopy-
+[1106772.754574] nvme_tcp: tracing_off done
+[1106807.608671] tee (27472): drop_caches: 3
+[1106807.825404] Running randread depth 16 jobs 1 size 64K zc 0 remote zc 0 zcrc 0
+[1106866.915114] cpu_profile: calibration  average is 24 clock cycles, min is 24, max is 24 
+[1106886.960665] nvme_tcp: tracing_off  cpu            count              sum             sum2              min              max 
+[1106886.973620] nvme_tcp: copy    0                0       5193929060                0                0                0
+[1106886.985705] nvme_tcp: copy    1                0                0                0                0                0
+[1106886.997787] nvme_tcp: copy    2                0                0                0                0                0
+[1106887.009862] nvme_tcp: copy    3                0                0                0                0                0
+[1106887.021943] nvme_tcp: copy    4                0                0                0                0                0
+[1106887.034017] nvme_tcp: copy    5                0                0                0                0                0
+[1106887.046103] nvme_tcp: copy    6                0                0                0                0                0
+[1106887.058189] nvme_tcp: copy    7                0                0                0                0                0
+[1106887.070272] nvme_tcp: copy    8                0                0                0                0                0
+[1106887.082358] nvme_tcp: copy    9                0                0                0                0                0
+[1106887.094441] nvme_tcp: copy   10                0                0                0                0                0
+[1106887.106525] nvme_tcp: copy   11                0                0                0                0                0
+[1106887.118609] nvme_tcp: copy   12                0                0                0                0                0
+[1106887.130694] nvme_tcp: copy   13                0                0                0                0                0
+[1106887.142778] nvme_tcp: copy   14                0                0                0                0                0
+[1106887.154862] nvme_tcp: copy   15                0                0                0                0                0
+[1106887.166944] nvme_tcp: copy   16                0                0                0                0                0
+[1106887.179031] nvme_tcp: copy   17                0                0                0                0                0
+[1106887.191115] nvme_tcp: copy   18                0                0                0                0                0
+[1106887.203200] nvme_tcp: copy   19                0                0                0                0                0
+[1106887.215282] nvme_tcp: copy   20                0                0                0                0                0
+[1106887.227366] nvme_tcp: copy   21                0                0                0                0                0
+[1106887.239448] nvme_tcp: copy   22                0                0                0                0                0
+[1106887.251533] nvme_tcp: copy   23                0                0                0                0                0
+[1106887.263615] nvme_tcp: copy   24                0                0                0                0                0
+[1106887.275699] nvme_tcp: copy   25                0                0                0                0                0
+[1106887.287783] nvme_tcp: copy   26                0                0                0                0                0
+[1106887.299923] nvme_tcp: copy   27                0                0                0                0                0
+[1106887.312006] nvme_tcp: crc    0                0       6472966394                0                0                0
+[1106887.323993] nvme_tcp: crc    1                0                0                0                0                0
+[1106887.335977] nvme_tcp: crc    2                0                0                0                0                0
+[1106887.347964] nvme_tcp: crc    3                0                0                0                0                0
+[1106887.359950] nvme_tcp: crc    4                0                0                0                0                0
+[1106887.371936] nvme_tcp: crc    5                0                0                0                0                0
+[1106887.383921] nvme_tcp: crc    6                0                0                0                0                0
+[1106887.395907] nvme_tcp: crc    7                0                0                0                0                0
+[1106887.407892] nvme_tcp: crc    8                0                0                0                0                0
+[1106887.419879] nvme_tcp: crc    9                0                0                0                0                0
+[1106887.431864] nvme_tcp: crc   10                0                0                0                0                0
+[1106887.443851] nvme_tcp: crc   11                0                0                0                0                0
+[1106887.455835] nvme_tcp: crc   12                0                0                0                0                0
+[1106887.467821] nvme_tcp: crc   13                0                0                0                0                0
+[1106887.479806] nvme_tcp: crc   14                0                0                0                0                0
+[1106887.491793] nvme_tcp: crc   15                0                0                0                0                0
+[1106887.503778] nvme_tcp: crc   16                0                0                0                0                0
+[1106887.515765] nvme_tcp: crc   17                0                0                0                0                0
+[1106887.527750] nvme_tcp: crc   18                0                0                0                0                0
+[1106887.539737] nvme_tcp: crc   19                0                0                0                0                0
+[1106887.551721] nvme_tcp: crc   20                0                0                0                0                0
+[1106887.573889] nvme_tcp: crc   21                0                0                0                0                0
+[1106887.585882] nvme_tcp: crc   22                0                0                0                0                0
+[1106887.597866] nvme_tcp: crc   23                0                0                0                0                0
+[1106887.609841] nvme_tcp: crc   24                0                0                0                0                0
+[1106887.621824] nvme_tcp: crc   25                0                0                0                0                0
+[1106887.633810] nvme_tcp: crc   26                0                0                0                0                0
+[1106887.645796] nvme_tcp: crc   27                0                0                0                0                0
+[1106887.657781] nvme_tcp: tx_crc    0                0                0                0                0                0
+[1106887.670084] nvme_tcp: tx_crc    1                0                0                0                0                0
+[1106887.682363] nvme_tcp: tx_crc    2                0                0                0                0                0
+[1106887.694638] nvme_tcp: tx_crc    3                0                0                0                0                0
+[1106887.706917] nvme_tcp: tx_crc    4                0                0                0                0                0
+[1106887.719193] nvme_tcp: tx_crc    5                0                0                0                0                0
+[1106887.731471] nvme_tcp: tx_crc    6                0                0                0                0                0
+[1106887.743748] nvme_tcp: tx_crc    7                0                0                0                0                0
+[1106887.756026] nvme_tcp: tx_crc    8                0                0                0                0                0
+[1106887.768302] nvme_tcp: tx_crc    9                0                0                0                0                0
+[1106887.780578] nvme_tcp: tx_crc   10                0                0                0                0                0
+[1106887.792855] nvme_tcp: tx_crc   11                0                0                0                0                0
+[1106887.805130] nvme_tcp: tx_crc   12                0                0                0                0                0
+[1106887.817408] nvme_tcp: tx_crc   13                0                0                0                0                0
+[1106887.829685] nvme_tcp: tx_crc   14                0                0                0                0                0
+[1106887.841962] nvme_tcp: tx_crc   15                0                0                0                0                0
+[1106887.854240] nvme_tcp: tx_crc   16                0                0                0                0                0
+[1106887.866518] nvme_tcp: tx_crc   17                0                0                0                0                0
+[1106887.878796] nvme_tcp: tx_crc   18                0                0                0                0                0
+[1106887.891074] nvme_tcp: tx_crc   19                0                0                0                0                0
+[1106887.903350] nvme_tcp: tx_crc   20                0                0                0                0                0
+[1106887.915627] nvme_tcp: tx_crc   21                0                0                0                0                0
+[1106887.927902] nvme_tcp: tx_crc   22                0                0                0                0                0
+[1106887.940178] nvme_tcp: tx_crc   23                0                0                0                0                0
+[1106887.952453] nvme_tcp: tx_crc   24                0                0                0                0                0
+[1106887.964733] nvme_tcp: tx_crc   25                0                0                0                0                0
+[1106887.977010] nvme_tcp: tx_crc   26                0                0                0                0                0
+[1106887.989286] nvme_tcp: tx_crc   27                0                0                0                0                0
+[1106888.001562] nvme_tcp: tracing_off done
